@@ -1,0 +1,332 @@
+
+<html lang="fr" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — BTS SIO SISR</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans leading-relaxed transition-colors duration-300 selection:bg-emerald-500 selection:text-slate-950">
+
+    <!-- Navigation Fixe avec Mode Jour/Nuit -->
+    <header class="fixed top-0 left-0 w-full bg-white/80 dark:bg-slate-950/85 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 z-50 transition-colors duration-300">
+        <nav class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center text-sm">
+            <a href="#about" class="font-bold text-emerald-600 dark:text-emerald-400 hover:opacity-80 transition flex items-center gap-2 group">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <span class="font-mono text-xs sm:text-sm group-hover:underline">Guillaume HORTA</span>
+            </a>
+            
+            <div class="flex items-center gap-3 sm:gap-5 text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300 flex-wrap">
+                <a href="#about" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">Accueil</a>
+                <a href="#formation" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">Parcours</a>
+                <a href="#skills" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">Compétences</a>
+                <a href="#certifications" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">Certifs</a>
+                <a href="#projects" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">Projets</a>
+                <a href="#veille" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">Veille (E5)</a>
+                <a href="#e6" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">E6</a>
+                <a href="#contact" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition">Contact</a>
+                
+                <!-- Bouton Bascule Jour/Nuit -->
+                <button id="theme-toggle" aria-label="Changer le thème" class="p-2 rounded-lg border border-slate-300 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-emerald-500 transition-all hover:scale-105">
+                    <span id="theme-toggle-dark-icon" class="hidden">☀️</span>
+                    <span id="theme-toggle-light-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 space-y-24">
+
+        <!-- Section Accueil -->
+        <section id="about" class="space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800/60 text-emerald-800 dark:text-emerald-400 text-xs font-mono rounded-full">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Etudiant BTS SIO- Disponible pour Alternance/stages</span>
+            </div>
+
+            <div class="space-y-4 max-w-3xl">
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 leading-tight">
+                    Étudiant BTS SIO SISR — Administration Systèmes & Réseaux
+                </h1>
+                <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
+                    Bonjour ! Bienvenue sur mon portfolio. je suis une personne passionné par les infrastructures IT, la virtualisation et la sécurisation des services réseau.Actuellement je suis en cours de préparation des épreuves de synthèse du BTS SIO.
+                </p>
+            </div>
+
+            <!-- Boutons d'Action -->
+            <div class="flex flex-wrap gap-4 pt-4">
+                <a href="#projects" class="bg-emerald-600 hover:bg-emerald-500 text-white dark:text-slate-950 font-bold px-6 py-3 rounded-lg text-sm transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-emerald-600/20 flex items-center gap-2">
+                    <span>Voir mes projets</span>
+                    <span>→</span>
+                </a>
+                
+                <a href="assets/CV-BTS-SIO-SISR.pdf" target="_blank" rel="noopener noreferrer" class="border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900/60 text-slate-700 dark:text-slate-300 hover:border-emerald-500 dark:hover:border-emerald-500 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 transform hover:-translate-y-0.5 shadow-sm flex items-center gap-2 group">
+                    <span>Consulter mon CV</span>
+                    <span class="text-xs text-slate-400 group-hover:text-emerald-500 transition">&nearr;</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Formation & Parcours -->
+        <section id="formation" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                <h2 class="text-xl font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                    <span>🎓</span> Formation & Parcours
+                </h2>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- BTS SIO -->
+                <div class="p-5 bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all duration-300 space-y-2">
+                    <div class="flex justify-between items-start flex-wrap gap-2">
+                        <h3 class="font-semibold text-slate-900 dark:text-slate-100">BTS SIO option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</h3>
+                        <span class="text-xs bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800/50 px-2.5 py-1 rounded font-mono">2025 — 2027 (En cours)</span>
+                    </div>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Spécialisation dans le déploiement, l'administration, la sécurisation et l'optimisation des infrastructures informatiques et des réseaux d'entreprise.
+                    </p>
+                </div>
+
+                <!-- Stage IFRASS -->
+                <div class="p-5 bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all duration-300 space-y-3">
+                    <div class="flex justify-between items-start flex-wrap gap-2">
+                        <div>
+                            <h3 class="font-semibold text-slate-900 dark:text-slate-100">Stage Service Numérique — IFRASS Campus Louis Lareng</h3>
+                            <p class="text-xs text-emerald-600 dark:text-emerald-400 font-mono mt-0.5">Expérience professionnelle immersive (8 semaines)</p>
+                        </div>
+                        <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-2.5 py-1 rounded font-mono">Stage 8 semaines</span>
+                    </div>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Immersion intégrale au sein du service informatique sous l'autorité du responsable de service :
+                    </p>
+                    <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-1.5 list-disc list-inside">
+                        <li>Création des comptes utilisateurs et déploiement de postes de travail pour étudiants et personnels.</li>
+                        <li>Installation, remplacement et configuration avancée de bornes Wi-Fi.</li>
+                        <li>Préparation, masterisation et remise à zéro de parcs PC post-utilisation.</li>
+                        <li>Démontage d'équipements (PC, imprimantes) et recyclage sélectif des composants réutilisables.</li>
+                        <li>Interventions sur l'infrastucture réseau et gestion de l'adressage IP.</li>
+                        <li>Assistance technique et support utilisateur direct auprès des étudiants et agents.</li>
+                    </ul>
+                </div>
+
+                <!-- Baccalauréat -->
+                <div class="p-5 bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all duration-300 space-y-2">
+                    <div class="flex justify-between items-start flex-wrap gap-2">
+                        <h3 class="font-semibold text-slate-900 dark:text-slate-100">Baccalauréat</h3>
+                        <span class="text-xs bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800/50 px-2.5 py-1 rounded font-mono">Obtenu en 2025</span>
+                    </div>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Obtention du diplôme et orientation académique vers l'ingénierie système et réseau.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences Techniques -->
+        <section id="skills" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                <h2 class="text-xl font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                    <span>⚡</span> Compétences Techniques
+                </h2>
+                <span class="text-xs font-mono text-slate-500">SISR Stack</span>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-5 text-sm">
+                <!-- Systèmes & Virtualisation -->
+                <div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 hover:-translate-y-1 transition-all duration-300 group space-y-3 shadow-sm hover:shadow-md">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-800/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-lg group-hover:scale-110 transition-transform">
+                        🖥️
+                    </div>
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100">Systèmes & Virtualisation</h3>
+                    <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-1.5 list-disc list-inside">
+                        <li>Windows Server (Active Directory, GPO)</li>
+                        <li>Linux (Ubuntu Server CLI)</li>
+                        <li>VMware ESXi / Workstation</li>
+                        <li>Oracle VirtualBox</li>
+                    </ul>
+                </div>
+
+                <!-- Réseaux & Infrastructures -->
+                <div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 hover:-translate-y-1 transition-all duration-300 group space-y-3 shadow-sm hover:shadow-md">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-800/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-lg group-hover:scale-110 transition-transform">
+                        🌐
+                    </div>
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100">Réseaux & Protocols</h3>
+                    <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-1.5 list-disc list-inside">
+                        <li>Protocoles TCP/IP, DNS, DHCP</li>
+                        <li>VLANs & Routage inter-VLAN</li>
+                        <li>Cisco Packet Tracer (CLI)</li>
+                        <li>Planification d'adressage IP</li>
+                    </ul>
+                </div>
+
+                <!-- Sécurité, Supervision & Parc -->
+                <div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 hover:-translate-y-1 transition-all duration-300 group space-y-3 shadow-sm hover:shadow-md">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-800/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-lg group-hover:scale-110 transition-transform">
+                        🔒
+                    </div>
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100">Sécurité & Gestion de Parc</h3>
+                    <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-1.5 list-disc list-inside">
+                        <li>Pare-feu pfSense & VPN (ProtonVPN)</li>
+                        <li>Supervision Zabbix & GLPI</li>
+                        <li>Analyse de trafic : Wireshark & Nmap</li>
+                        <li>Administration à distance : SSH & PuTTY</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                <h2 class="text-xl font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                    <span>🏆</span> Certifications
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="p-5 bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 transition-all space-y-2">
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100">Cisco Networking Academy</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400">Certification Cisco Packet Tracer & Fundamentals des réseaux.</p>
+                    <span class="inline-block text-xs text-amber-600 dark:text-amber-400 font-medium pt-1">⏳ En cours de validation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projets & Réalisations -->
+        <section id="projects" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                <h2 class="text-xl font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                    <span>📁</span> Projets & Réalisations
+                </h2>
+            </div>
+            
+            <div class="grid gap-5">
+                <!-- Projet Perso : AdGuard Home & DNS -->
+                <article class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all duration-300 space-y-4 shadow-sm hover:shadow-md">
+                    <div class="flex justify-between items-start flex-wrap gap-2">
+                        <div>
+                            <h3 class="font-semibold text-lg text-slate-900 dark:text-slate-100">Déploiement d'un Serveur DNS local (AdGuard Home & ProtonVPN)</h3>
+                            <p class="text-xs text-emerald-600 dark:text-emerald-400 font-mono mt-0.5">Contexte : Projet Personnel</p>
+                        </div>
+                        <span class="text-xs bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 px-3 py-1 rounded-full border border-emerald-300 dark:border-emerald-800/50">Projet Perso</span>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Mise en place d'un serveur local intégrant AdGuard Home pour la simulation et la gestion personnalisée de requêtes DNS. Configuration d'un tunnel VPN sécurisé (ProtonVPN) pour l'anonymisation et la maîtrise complète des flux réseau.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-emerald-400 border border-slate-200 dark:border-emerald-900/60 px-2.5 py-1 rounded">AdGuard Home</span>
+                        <span class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-emerald-400 border border-slate-200 dark:border-emerald-900/60 px-2.5 py-1 rounded">Serveur DNS</span>
+                        <span class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-emerald-400 border border-slate-200 dark:border-emerald-900/60 px-2.5 py-1 rounded">ProtonVPN</span>
+                    </div>
+                </article>
+
+                <!-- Projet Éducatif : Cisco & Labs VM -->
+                <article class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all duration-300 space-y-4 shadow-sm hover:shadow-md">
+                    <div class="flex justify-between items-start flex-wrap gap-2">
+                        <div>
+                            <h3 class="font-semibold text-lg text-slate-900 dark:text-slate-100">Infrastructures Virtualisées & Simulations Cisco Packet Tracer</h3>
+                            <p class="text-xs text-emerald-600 dark:text-emerald-400 font-mono mt-0.5">Contexte : Travaux Pratiques BTS SIO</p>
+                        </div>
+                        <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-700">Académique</span>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Simulation d'environnements d'entreprise sous Cisco Packet Tracer (résolution de cas d'infrastructures complexes). Déploiement de VM de travail : Windows Server avec Active Directory, Ubuntu Server et supervision Zabbix. Études de cas et analyses de trames avec Wireshark.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-emerald-400 border border-slate-200 dark:border-emerald-900/60 px-2.5 py-1 rounded">Cisco Packet Tracer</span>
+                        <span class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-emerald-400 border border-slate-200 dark:border-emerald-900/60 px-2.5 py-1 rounded">Active Directory</span>
+                        <span class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-emerald-400 border border-slate-200 dark:border-emerald-900/60 px-2.5 py-1 rounded">Zabbix</span>
+                        <span class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-emerald-400 border border-slate-200 dark:border-emerald-900/60 px-2.5 py-1 rounded">Wireshark</span>
+                    </div>
+                    <div class="pt-3 border-t border-slate-200 dark:border-slate-800/60 flex justify-end">
+                        <a href="assets/doc-projet-cisco.pdf" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">
+                            <span>📄 Fiche de réalisation (PDF)</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Veille (E5) -->
+        <section id="veille" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                <h2 class="text-xl font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                    <span>📡</span> Veille Technologique (Épreuve E5)
+                </h2>
+            </div>
+            <div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 space-y-3">
+                <h3 class="font-semibold text-slate-900 dark:text-slate-100">Sujet : L'Architecture Zero Trust & Sécurisation DNS</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">
+                    Présentation des méthodologies d'analyse de trames, de la protection des résolutions DNS et de la stratégie d'authentification continue.
+                </p>
+                <a href="assets/dossier-veille.pdf" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-600 dark:text-emerald-400 hover:underline inline-block pt-1">
+                    📄 Dossier de veille (PDF) →
+                </a>
+            </div>
+        </section>
+
+        <!-- Tableau E6 -->
+        <section id="e6" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                <h2 class="text-xl font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                    <span>📊</span> Tableau de Synthèse (Épreuve E6)
+                </h2>
+            </div>
+            <div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 space-y-4">
+                <p class="text-sm text-slate-600 dark:text-slate-400">
+                    Accès au tableau de compétences validées lors de mon stage au campus IFRASS et en ateliers professionnels BTS SISR.
+                </p>
+                <a href="assets/tableau-e6.pdf" target="_blank" rel="noopener noreferrer" class="text-xs bg-emerald-600 text-white dark:text-slate-950 font-bold px-4 py-2 rounded hover:bg-emerald-500 transition inline-block">
+                    📄 Télécharger le Tableau E6 (PDF)
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="space-y-6 pb-20">
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                <h2 class="text-xl font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                    <span>📫</span> Un soucis, une question ? Me contacter : 
+                </h2>
+            </div>
+            <div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 space-y-3 font-mono text-sm text-slate-700 dark:text-slate-300">
+                <p><span class="text-emerald-600 dark:text-emerald-400 font-bold">Email :</span> <a href="mailto:votre.email@domaine.com" class="hover:underline">guillaumehorta689@gmail.com</a></p>
+<<<<<<< HEAD
+                <p><span class="text-emerald-600 dark:text-emerald-400 font-bold">GitHub :</span> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:underline">github.comgit init
+=======
+                <p><span class="text-emerald-600 dark:text-emerald-400 font-bold">GitHub :</span> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:underline">github.com</a></p>
+>>>>>>> a7f65c43004c8ba4df12f0b5c767f0d60db7414e
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-900 py-8 text-center text-xs text-slate-500 font-mono">
+        Portfolio BTS SIO SISR — HTML5 & Tailwind CSS
+    </footer>
+
+    <!-- Script JavaScript pour le Mode Jour/Nuit -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        themeToggleBtn.addEventListener('click', function() {
+            document.documentElement.classList.toggle('dark');
+            darkIcon.classList.toggle('hidden');
+            lightIcon.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
